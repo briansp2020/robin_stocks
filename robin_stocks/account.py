@@ -434,6 +434,8 @@ def build_holdings():
     cash = "{0:.2f}".format(float(accounts_data['cash'])+float(accounts_data['uncleared_deposits']))
 
     for item in positions_data:
+        if not item:
+            break
         instrument_data = stocks.get_instrument_by_url(item['instrument'])
         symbol = instrument_data['symbol']
         fundamental_data = stocks.get_fundamentals(symbol)[0]
