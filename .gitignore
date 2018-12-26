@@ -10,3 +10,4 @@ uploadnotes.txt
 __pycache__/
 *.so
 *~
+test.py
